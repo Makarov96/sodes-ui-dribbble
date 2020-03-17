@@ -37,7 +37,7 @@ class Header extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Container(
-      margin: EdgeInsets.only(top: screenHeight*0.05),
+      margin: EdgeInsets.only(top: screenHeight*0.02),
       padding: EdgeInsets.all(10.0),
       width: screenWidth,
       height: screenHeight*0.1,
@@ -48,6 +48,8 @@ class Header extends StatelessWidget {
           letters ,
           cardImage
         ]
+      ),decoration: BoxDecoration(
+        color:Color(0xFF1E2843)
       ),
     );
 

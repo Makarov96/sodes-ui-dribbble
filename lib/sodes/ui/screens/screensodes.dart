@@ -4,7 +4,6 @@ import 'package:sodes_ui/sodes/ui/widgets/header.dart';
 import 'package:sodes_ui/sodes/ui/widgets/listcardsodas.dart';
 import 'package:sodes_ui/sodes/ui/widgets/listhistories.dart';
 import 'package:sodes_ui/sodes/ui/widgets/mostpopulard.dart';
-import 'package:sodes_ui/sodes/ui/widgets/structurecard.dart';
 import 'package:sodes_ui/widgets/backgroundcolor.dart';
 
 class ScreenSodes extends StatefulWidget {
@@ -18,19 +17,20 @@ class _ScreenSodesState extends State<ScreenSodes> {
   @override
   Widget build(BuildContext context) {
     return Material(
-       type: MaterialType.transparency,
+      type: MaterialType.transparency,
       child: Stack(
         children: <Widget>[
           BackGroundColor(
             height: null,
           ),
-          Column(children: <Widget>[
 
+           ListView(
+            padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.15),
+            children: <Widget>[  ListHistories(),MostPopular(), LisCardSodas()],
+          ),
+          Column(children: <Widget>[
             Header(),
-            ListHistories(),
-            MostPopular(),
-            LisCardSodas()
-            ])
+          ]),
         ],
       ),
     );

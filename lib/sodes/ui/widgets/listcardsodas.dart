@@ -20,7 +20,7 @@ class LisCardSodas extends StatelessWidget {
         children:<Widget>[
           StructureCard(modelinfosoda: ModelInfoSode(imagePath: "assets/img/soda.jpg", name: "Apple Juice", price: "8.65"),),
           StructureCard(modelinfosoda: ModelInfoSode(imagePath: "assets/img/soda2.jpg", name: "Pinapple Juice", price: "9.40"),),
-          StructureCard(modelinfosoda: ModelInfoSode(imagePath: "assets/img/soda3.jpg", name: "Grapes Juice", price: "10.50"),)
+          StructureCard(modelinfosoda: ModelInfoSode(imagePath: "assets/img/soda3.jpg", name: "Grapes Juice", price: "8.10"),)
        
         ]
       ),

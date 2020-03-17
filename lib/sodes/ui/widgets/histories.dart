@@ -7,10 +7,11 @@ class Histories extends StatelessWidget {
   Histories({Key key, this.modelhistories}) : super(key: key);
 
   Widget customHistories(context) {
+    
     return Container(
       child: Container(
-        width: 80.0,
-        height: 80.0,
+        width: 70.0,
+        height: 70.0,
         margin: EdgeInsets.only(right: 0.0),
         decoration: BoxDecoration(
             border: Border.all(

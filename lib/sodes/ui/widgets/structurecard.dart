@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sodes_ui/sodes/model/model_info_sodes.dart';
+import 'package:sodes_ui/sodes/ui/screens/screenaddsodes.dart';
 
 class StructureCard extends StatefulWidget {
   ModelInfoSode modelinfosoda;
+  List<ModelInfoSode> sendInfo =List<ModelInfoSode>();
   StructureCard({Key key, this.modelinfosoda}) : super(key: key);
 
   @override
@@ -19,7 +21,7 @@ class _StructureCardState extends State<StructureCard> {
       children: <Widget>[
         Flexible(
             child: Container(
-              margin: EdgeInsets.only(top: screenHeight*0.02),
+          margin: EdgeInsets.only(top: screenHeight * 0.02),
           child: Text(widget.modelinfosoda.name,
               style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -30,7 +32,8 @@ class _StructureCardState extends State<StructureCard> {
     );
 
     final card = Container(
-      margin: EdgeInsets.only(top: screenHeight * 0.03, right: screenWidth*0.05),
+      margin:
+          EdgeInsets.only(top: screenHeight * 0.03, right: screenWidth * 0.05),
       height: screenHeight * 0.50,
       width: screenWidth * 0.68,
       child: headersoda,
@@ -39,15 +42,10 @@ class _StructureCardState extends State<StructureCard> {
               fit: BoxFit.cover,
               image: AssetImage(widget.modelinfosoda.imagePath)),
           borderRadius: BorderRadius.all(Radius.circular(25)),
-          
-           gradient: LinearGradient(colors:[
-        Color(0xFFF78C94),
-        Color(0xFF4D3D54)
-      ] ,
-        begin: Alignment.center,
-        end: Alignment.bottomCenter
-      )
-          ),
+          gradient: LinearGradient(
+              colors: [Color(0xFFF78C94), Color(0xFF4D3D54)],
+              begin: Alignment.center,
+              end: Alignment.bottomCenter)),
     );
 
     final infosoda = Row(children: <Widget>[
@@ -65,12 +63,18 @@ class _StructureCardState extends State<StructureCard> {
             color: Colors.white,
             icon: Icon(Icons.add_shopping_cart),
             onPressed: () {
-              print("Say hi");
+              //Navigator.of(context).pushNamed('/cardsodes');
+
+              widget.sendInfo.add(ModelInfoSode(imagePath: widget.modelinfosoda.imagePath,name:widget.modelinfosoda.name, 
+              price: widget.modelinfosoda.price ));      
+              Navigator.push(
+                  context,
+                  new MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          new ScreenAddSodes(infosode: widget.sendInfo )));
             }),
       )
     ]);
-
-
 
     return Stack(
       children: <Widget>[

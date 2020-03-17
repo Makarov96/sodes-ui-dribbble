@@ -18,7 +18,7 @@ class ListHistories extends StatelessWidget {
               modelhistories: Modelhistories(
                   imgPath:
                       "https://static.vecteezy.com/system/resources/thumbnails/000/211/024/small/Avocado-01.jpg",
-                  type: "Aguacate",
+                  type: "Avocado",
                   color: 0xFF30AA44)),
           Histories(
               modelhistories: Modelhistories(
@@ -30,19 +30,19 @@ class ListHistories extends StatelessWidget {
               modelhistories: Modelhistories(
                   imgPath:
                       "https://cdn1.vectorstock.com/i/1000x1000/06/95/bunch-of-grapes-vector-4930695.jpg",
-                  type: "Uvas",
+                  type: "grapes",
                   color: 0xFF6A2689)),
           Histories(
               modelhistories: Modelhistories(
                   imgPath:
                       "https://cdn4.vectorstock.com/i/1000x1000/13/13/apple-red-apple-fruit-icon-vector-23231313.jpg",
-                  type: "Manzana",
+                  type: "Apple's",
                   color: 0xFFFF4016)),
           Histories(
               modelhistories: Modelhistories(
                   imgPath:
                       "https://static.vecteezy.com/system/resources/thumbnails/000/211/024/small/Avocado-01.jpg",
-                  type: "Aguacate",
+                  type: "Avocado",
                   color: 0xFF30AA44)),
         ],
       ),
